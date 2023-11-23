@@ -27,7 +27,7 @@
             let num2 = document.querySelector('#scNumero').value;
             let num3= document.querySelector('#trNumero').value;
             
-            window.open(`phpBackDaMedia.php?_Numero1=${num1}&&_Numero2=${num2}&&_Numero3=${num3}`);
+            window.open(`phpBackDoExercicio.php?_Numero1=${num1}&&_Numero2=${num2}&&_Numero3=${num3}`);
         }
     </script>
 
