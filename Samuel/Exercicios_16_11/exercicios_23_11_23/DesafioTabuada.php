@@ -14,30 +14,29 @@
    tomem cuidado e lembrem-se das aberturas das Tags necessárias.     -->
     <form>
 
-        <input type="number" placeholder="Insira um número" id="num1">
-        <label>Operação</label>
+        <label>Escolha a Tabuada</label>
         <select name="operacoesMath" id="calc1">
-            <option value="1">Somar</option>
-            <option value="2">Subtrair</option>
-            <option value="3">Divisão</option>
-            <option value="multiplicar">Multiplicação</option>
-            <option value="somar">Somar</option>
-            <option value="somar">Somar</option>
-            <option value="somar">Somar</option>
-            <option value="somar">Somar</option>
-            <option value="somar">Somar</option>
-            <option value="somar">Somar</option>
+            <option value="1">Tabuada do 1</option>
+            <option value="2">Tabada do 2 </option>
+            <option value="3">Tabuada do 3 </option>
+            <option value="4">Tabuada do 4 </option>
+            <option value="5">Tabuada do 5 </option>
+            <option value="6">Tabuada do 6 </option>
+            <option value="7">Tabuada do 7 </option>
+            <option value="8">Tabuada do 8 </option>
+            <option value="9">Tabuada do 9 </option>
+            <option value="10">Tabuada do 10 </option>
         </select>
-        <input onclick="calculaFatorial()" type="button" value="FATORIAL">
+        <input onclick="GeraCalculadora()" type="button" value="GERAR">
 
     </form>
 
 
 
     <script>
-        function calculaFatorial() {
-            let numero1 = document.querySelector('#num1').value;
-            window.open(`backExercicio23_11.php?_Numero1=${numero1}`);
+        function GeraCalculadora() {
+            let gerador = document.querySelector('#calc1').value;
+            window.open(`backDesafioCalculadora.php?valor1=${gerador}`);
         }
     </script>
 
