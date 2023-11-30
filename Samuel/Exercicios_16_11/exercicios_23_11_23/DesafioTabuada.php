@@ -16,22 +16,15 @@
 
         <label>Escolha a Tabuada</label>
         <select name="operacoesMath" id="calc1">
-            <option value="1">Tabuada do 1</option>
-            <option value="2">Tabada do 2 </option>
-            <option value="3">Tabuada do 3 </option>
-            <option value="4">Tabuada do 4 </option>
-            <option value="5">Tabuada do 5 </option>
-            <option value="6">Tabuada do 6 </option>
-            <option value="7">Tabuada do 7 </option>
-            <option value="8">Tabuada do 8 </option>
-            <option value="9">Tabuada do 9 </option>
-            <option value="10">Tabuada do 10 </option>
+            <?php for ($i=1; $i<11; $i++) { ?>
+                <option value="1">Tabuada do <?php echo $i;?></option>
+    
+            <?php } ?>
+
         </select>
         <input onclick="GeraCalculadora()" type="button" value="GERAR">
 
     </form>
-
-
 
     <script>
         function GeraCalculadora() {
@@ -40,12 +33,6 @@
         }
     </script>
 
-
-
-
-
-
 </body>
-
 
 </html>
