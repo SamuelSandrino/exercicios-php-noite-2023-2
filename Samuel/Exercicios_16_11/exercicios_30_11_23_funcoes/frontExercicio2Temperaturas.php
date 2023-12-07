@@ -12,8 +12,12 @@ ou vice-versa. Se ele digitar/escolher 1, é de Celsius para Farenheit, se digit
  outro valor mostre uma mensagem de erro. Para cada conversão, chame a função correta.  -->
 
  <form>
+<h3>Conversor de temperatura</h3>
+<label>Insira a temperatura</label><br>
+<input type="number" placeholder="insira a temperatura" id="temp"><br>
+<input type="radio" name="escolha-temperatura" value="1"  > Celsius para Farenheit <br>
+<input type="radio" name="escolha-temperatura" value="2"  > Farenheit para Celsius <br>
 
-<input type="number" placeholder="insira 1 ou 2" id="temp">
 
 <input onclick="EnviarTemperatura()" type="button" value="Converter Temperatura">
 
@@ -22,32 +26,13 @@ ou vice-versa. Se ele digitar/escolher 1, é de Celsius para Farenheit, se digit
 <script>
 function EnviarTemperatura() {
     let num1 = document.querySelector('#temp').value;
-    let valida = validarCampo(num1);
+    let num2 = document.querySelector('input[name=escolha-temperatura]:checked').value;
 
-    if (valida == true) {
-        window.open(`backExercicio2Temperaturas.php?_Numero1=${num1}`);
-    }
+    window.open(`backExercicio2Temperaturas.php?num1=${num1}&&num2=${num2}`);
 }
 
-function validarCampo(valor1) {
-
-    if (valor1 == '' || valor1 != 1 || valor2 !=2) {
-        alert('Digite um valor válido!');
-        document.querySelector('#temp').focus();
-        return false;
-    } else {
-        return true;
-    }
-}
 
 </script>
-
-
-
-
-
-
-
 
 </body>
 
