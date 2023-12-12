@@ -17,7 +17,7 @@ ou vice-versa. Se ele digitar/escolher 1, é de Celsius para Farenheit, se digit
 <input type="number" placeholder="insira a temperatura" id="temp"><br>
 <input type="radio" name="escolha-temperatura" value="1"  > Celsius para Farenheit <br>
 <input type="radio" name="escolha-temperatura" value="2"  > Farenheit para Celsius <br>
-
+d
 
 <input onclick="EnviarTemperatura()" type="button" value="Converter Temperatura">
 
