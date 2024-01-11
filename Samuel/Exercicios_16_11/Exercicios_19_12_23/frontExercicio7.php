@@ -13,7 +13,7 @@ monte um array e caso a primeira posição seja menor que 5, remova o primeiro v
 
 <form>
 
-        <input type="number" placeholder="Gerar 5 numeros" id="num3">
+        <input type="number" placeholder="Insira o número 5" id="num3">
         <input onclick="geraArray()" type="button" value="GERAR"><br>
 
 

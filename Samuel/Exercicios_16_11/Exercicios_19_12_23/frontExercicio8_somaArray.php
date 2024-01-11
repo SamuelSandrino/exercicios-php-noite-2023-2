@@ -8,12 +8,13 @@
 </head>
 
 <body>
-<!-- 8 - Crie uma função que receba um array de 5 números inteiros, os valores serão passados pelo usuário,
+    <!-- 8 - Crie uma função que receba um array de 5 números inteiros, os valores serão passados pelo usuário,
  e retorne a soma de todos os elementos desse array. -->
 
-<form>
+    <form>
 
-        <input type="number" placeholder="Gerar 5 numeros" id="num3">
+        <label> Insira 5 números separados por vírgula </label> <br>
+        <input type="text" placeholder="Insira 5 numeros" id="num3">
         <input onclick="geraArray()" type="button" value="GERAR"><br>
 
 
@@ -25,7 +26,8 @@
         function geraArray() {
 
             let numero3 = document.querySelector('#num3').value;
-            window.open(`backExercicio7.php?_Numero3=${numero3}`);
+            window.open(`backExercicio8.php?_Numero3=${numero3}`);
+            
         }
     </script>
 
