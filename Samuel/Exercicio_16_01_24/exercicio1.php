@@ -11,6 +11,13 @@
     </head>
 
     <body>
+    <header>
+    <ul>
+        <span>Encontre seu exercício aqui!</span>
+        <li><a href="exercicio1.php">Exercício 1</a></li> 
+        <li><a href="exercicio2.php">Exercício 2</a></li>
+    </ul>
+</header>
         <form action="">
             <input type="number" id="valor1" placeholder="Digite o primeiro valor">
             <input type="text" id="valor2" placeholder="Digite o segundo valor">
