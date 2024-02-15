@@ -2,7 +2,7 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$dbname = "data_base";
+$dbname = "pjr_php_db";
 
 $conexao = new mysqli($hostname, $username, $password, $dbname);
 
