@@ -1,3 +1,5 @@
+<?php
+
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
@@ -33,19 +35,4 @@
       </div>
     </div>  
 </body>
-
-<script>
-function enviarDados() {
-    let valor1 = document.getElementById('nome_login').value;
-    let valor2 = document.getElementById('senha').value;
-
-        window.open(`backPaginaLogin.php?valor1=${valor1}&&valor2=${valor2}`);
-
-}
-
-</script>
-
-
-
-</html>
-
+?>
