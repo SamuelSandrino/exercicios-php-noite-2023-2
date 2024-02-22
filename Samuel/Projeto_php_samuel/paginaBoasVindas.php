@@ -18,22 +18,22 @@ $nome_user = $_GET['NomeUsuario'];
 
 <h1> Seja bem vindo <?php echo $nome_user; ?></h1>
 
-
 <?php
 if ($tipo_user == 1) { ?>
     <span> Esse é o seu sistema master <br>
-        Você é o administrador sistema,
-    <br> siga as orientações para poder <br>
-        Fazer o cadastro dos colaboradores! </span>
+        Você é o administrador do sistema,
+    <br> siga as orientações para <br>
+         cadastras os colaboradores! </span>
+        <!-- <a href= "Pagina_criar_senha.php"> <br> <button>Cadastrar usuário </button> </a> -->
+<?php
+}
+
+?>
 
 <a href= "Pagina_criar_senha.php"> <br> <button>Cadastrar usuário </button> </a>
 
-<?php
-}
-?>
 
-    
-
+<a href= "relatorio_projeto.php"> <br> <button>Gerar Relatório users Cadastrados </button> </a>
 
 
 
