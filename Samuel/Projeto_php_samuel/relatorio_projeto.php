@@ -1,8 +1,8 @@
-<?php include 'conexao.php'; ?>
+<?php include './../conexao/conexao.php'; ?>
 <?php
 function relatorioCliente($conexao)
 {
-    $dados = "SELECT * FROM cliente";
+    $dados = "SELECT * FROM tb_usuarios";
 
     $sql_conexao = $conexao->query($dados) or die($conexao->error);
 
@@ -27,13 +27,18 @@ $dadosClientes = relatorioCliente($conexao);
 <body>
     <table class="table">
         <thead>
-            <td>id_cliente</td>
-            <td> Cliente </td>
-            <td> Nascimento </td>
-            <td> Sexo </td>
-            <td> Peso </td>
-            <td> Altura </td>
-            <td> Nacionalidade</td>
+            <td>Nome do usuário</td>
+            <td> CPF </td>
+            <td> Data Nascimento </td>
+            <td> Telefone </td>
+            <td> Endereço </td>
+            <td> Número casa </td>
+            <td> Bairro </td>
+            <td> Ativo </td>
+            <td> tipo  </td>
+            <td> login </td>
+            <td> senha </td>
+
         </thead>
 
 
@@ -41,25 +46,37 @@ $dadosClientes = relatorioCliente($conexao);
             <?php foreach ($dadosClientes as $cliente) { ?>
                 <tr>
                     <td>
-                        <?php echo $cliente['id_cliente']; ?>
+                        <?php echo $cliente['nome_usuario']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['nome']; ?>
+                        <?php echo $cliente['cpf']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['nascimento']; ?>
+                        <?php echo $cliente['data_nascimento']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['sexo']; ?>
+                        <?php echo $cliente['telefone']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['peso']; ?>
+                        <?php echo $cliente['endereco']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['altura']; ?>
+                        <?php echo $cliente['num_casa']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['nacionalidade']; ?>
+                        <?php echo $cliente['bairro']; ?>
+                    </td>
+                    <td>
+                        <?php echo $cliente['ativo']; ?>
+                    </td>
+                    <td>
+                        <?php echo $cliente['tipo_usuario']; ?>
+                    </td>
+                    <td>
+                        <?php echo $cliente['login']; ?>
+                    </td>
+                    <td>
+                        <?php echo $cliente['senha']; ?>
                     </td>
                 </tr>
             <?php } ?>

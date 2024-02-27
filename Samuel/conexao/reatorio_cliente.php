@@ -1,15 +1,15 @@
 <?php include 'conexao.php'; ?>
 <?php
-function relatorioCliente($conexao)
+function relatorioUser($conexao)
 {
-    $dados = "SELECT * FROM cliente";
+    $dados = "SELECT * FROM tb_usuarios";
 
     $sql_conexao = $conexao->query($dados) or die($conexao->error);
 
     return $sql_conexao;
 
 }
-$dadosClientes = relatorioCliente($conexao);
+$dadosUsuarios = relatorioUser($conexao);
 ?>
 
 
@@ -21,45 +21,42 @@ $dadosClientes = relatorioCliente($conexao);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Exercicio-conexao</title>
+    <title>relatorio-projeto-php</title>
 </head>
 
 <body>
     <table class="table">
         <thead>
-            <td>id_cliente</td>
-            <td> Cliente </td>
-            <td> Nascimento </td>
-            <td> Sexo </td>
-            <td> Peso </td>
-            <td> Altura </td>
-            <td> Nacionalidade</td>
+            <td>Nome </td>
+            <td> Endereço </td>
+            <td> Tipo </td>
+            <td> login </td>
+            <td> Senha </td>
+            <td> cidade </td>
+        
         </thead>
 
 
         <tbody>
-            <?php foreach ($dadosClientes as $cliente) { ?>
+            <?php foreach ($dadosUsuarios as $user) { ?>
                 <tr>
                     <td>
-                        <?php echo $cliente['id_cliente']; ?>
+                        <?php echo $user['nome_usuario']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['nome']; ?>
+                        <?php echo $user['endereco']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['nascimento']; ?>
+                        <?php echo $user['tipo_usuario']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['sexo']; ?>
+                        <?php echo $user['login']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['peso']; ?>
+                        <?php echo $user['senha']; ?>
                     </td>
                     <td>
-                        <?php echo $cliente['altura']; ?>
-                    </td>
-                    <td>
-                        <?php echo $cliente['nacionalidade']; ?>
+                        <?php echo $user['fk_id_tb_cidades']; ?>
                     </td>
                 </tr>
             <?php } ?>
@@ -70,3 +67,10 @@ $dadosClientes = relatorioCliente($conexao);
 
 
 </html>
+
+<script>    
+
+
+
+
+</script> 

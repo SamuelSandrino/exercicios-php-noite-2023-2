@@ -1,4 +1,10 @@
-<?php  
+
+<?php
+ include '././cabecalho_projeto_php.php'; 
+ ?>
+
+<?php 
+
 $tipo_user = $_GET['tipo_usuario'];
 $nome_user = $_GET['NomeUsuario'];
 
@@ -20,7 +26,8 @@ $nome_user = $_GET['NomeUsuario'];
 
 <?php
 if ($tipo_user == 1) { ?>
-    <span> Esse é o seu sistema master <br>
+ 
+    <span> </br> Esse é o seu sistema master <br>
         Você é o administrador do sistema,
     <br> siga as orientações para <br>
          cadastras os colaboradores! </span>
@@ -30,10 +37,10 @@ if ($tipo_user == 1) { ?>
 
 ?>
 
-<a href= "Pagina_criar_senha.php"> <br> <button>Cadastrar usuário </button> </a>
+<!-- <a href= "Pagina_criar_senha.php"> <br> <button>Cadastrar usuário </button> </a>
 
 
-<a href= "relatorio_projeto.php"> <br> <button>Gerar Relatório users Cadastrados </button> </a>
+<a href= "relatorio_projeto.php"> <br> <button>Gerar Relatório users Cadastrados </button> </a> -->
 
 
 

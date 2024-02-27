@@ -20,7 +20,14 @@ $loginDeUser = $_GET['valor4'];
 $contrasenha = $_GET['valor5'];
 $todaciudad = $_GET['valor6'];
 
-cadastro($conexao, $nombre, $ubicacion, $todaciudad, $tipoDeUser, $loginDeUser, $contrasenha);
+$returnCadastro = cadastro($conexao, $nombre, $ubicacion, $todaciudad, $tipoDeUser, $loginDeUser, $contrasenha);
+
+if($returnCadastro) {
+    
+    header('Location:./relatorio_projeto.php');
+        } else{
+            echo 'Erro';
+    }
 
 
 
