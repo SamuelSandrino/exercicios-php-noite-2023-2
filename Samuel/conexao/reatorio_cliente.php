@@ -1,15 +1,7 @@
-<?php include 'conexao.php'; ?>
+<?php include 'conexao.php';
+include 'ClassesProjeto.php'; ?>
 <?php
-function relatorioUser($conexao)
-{
-    $dados = "SELECT * FROM tb_usuarios";
-
-    $sql_conexao = $conexao->query($dados) or die($conexao->error);
-
-    return $sql_conexao;
-
-}
-$dadosUsuarios = relatorioUser($conexao);
+classesProjeto::relatorioUser($conexao);
 ?>
 
 
@@ -33,7 +25,7 @@ $dadosUsuarios = relatorioUser($conexao);
             <td> login </td>
             <td> Senha </td>
             <td> cidade </td>
-        
+
         </thead>
 
 
@@ -68,9 +60,9 @@ $dadosUsuarios = relatorioUser($conexao);
 
 </html>
 
-<script>    
+<script>
 
 
 
 
-</script> 
+</script>

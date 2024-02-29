@@ -1,17 +1,9 @@
-<?php include './../conexao/conexao.php'; ?>
-<?php
-function relatorioCliente($conexao)
-{
-    $dados = "SELECT * FROM tb_usuarios";
-
-    $sql_conexao = $conexao->query($dados) or die($conexao->error);
-
-    return $sql_conexao;
-
-}
-$dadosClientes = relatorioCliente($conexao);
+<?php include './../conexao/conexao.php';
+include 'ClassesProjeto.php';
 ?>
-
+<?php
+$dadosClientes = classesProjeto::relatorioCliente($conexao);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +27,7 @@ $dadosClientes = relatorioCliente($conexao);
             <td> Número casa </td>
             <td> Bairro </td>
             <td> Ativo </td>
-            <td> tipo  </td>
+            <td> tipo </td>
             <td> login </td>
             <td> senha </td>
 
